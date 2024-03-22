@@ -1,7 +1,7 @@
 :root{
-    --white:whitesmoke;
+    --white:rgb(215, 215, 215);
     --black:rgb(0, 0, 0);
-
+    --grey:rgb(38, 38, 38);
     --font-subtitulo:5vw;
     
 }
@@ -17,20 +17,20 @@ body{
     height: 5000px;
     overflow-x:hidden;
     color: var(--white);
+    font-family: "Fraunces", serif;
  
 }
 nav{
     width: 100%;
     height: auto;
-    background-color:rgb(81, 81, 172);
+    background:linear-gradient( var(--grey),var(--grey),var(--grey), var(--white));
     text-align: center;
     display: flex;
     position: fixed;
     justify-content: center;
     z-index: 1;
-    box-shadow: 0 0 10px 1px rgb(253, 253, 253);
     img{
-        width: 400px;
+        
         position: relative;
         margin: 14px;
         
@@ -67,12 +67,13 @@ header{
 }
 .container-2{
     h1{
-        text-align: center;
+        text-align: left;
         
         margin: 20px;
 
     }
     .carousel{
+        background-color: var(--grey);
         padding: 20px;
         height: auto;
         max-width: 100%;
@@ -86,6 +87,32 @@ header{
        
     }
     
+}
+.container-3{
+    width: 100%;
+    
+    background-color: var(--grey);
+    
+    justify-content: center;
+    align-items: center;
+    .plano{
+        text-align: center;
+        margin: 20px;
+        border-radius: 24px;
+        
+        background-color: var(--black);
+        h1{
+            margin: 20px;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            margin: 20px auto;
+            text-align: left;
+            width: 80%;
+        }
+        
+    }
 }
 @keyframes diminuir {
     from{
@@ -124,6 +151,11 @@ header{
 
 
 @media screen and (min-width: 1023px){
+    nav{
+        img{
+            width: 400px;
+        }
+    }
     .container-1{
         display: flex;
         align-items: center;
@@ -144,9 +176,22 @@ header{
             }
         }
     }
+    .container-3{
+        height: 800px;
+    display: flex;
+        .plano{
+            width: 500px;
+            height: 700px;
+        }
+    }
 }
 @media screen and (min-width: 768px) and
 (max-width: 1023px){
+    nav{
+        img{
+            width: 400px;
+        }
+    }
     header{
         img{
             width: 80%;
@@ -175,8 +220,21 @@ header{
             }
         }
     }
+    .container-3{
+        height: 800px;
+    display: flex;
+        .plano{
+            width: 500px;
+            height: 700px;
+        }
+    }
 }
 @media screen and (max-width: 768px){
+    nav{
+        img{
+            width: 200px;
+        }
+    }
     header{
         height: 700px;
         img{
@@ -204,6 +262,16 @@ header{
                 width: 200px;
                 height: 200px;
             }
+        }
+    }
+    .container-3{
+        height: 1200px;
+        display: flex;
+        flex-direction: column;
+        .plano{
+            width: 90%;
+           height: 400px;
+         
         }
     }
 }
