@@ -45,13 +45,19 @@ header{
     align-items: center;
     justify-content:center;
     animation: aparecer 2s ease-in-out;   
+    img{
+        animation: aumentar 2s ease-in;
+        -webkit-animation-timeline: view();
+        -webkit-animation-range: cover 0% cover 60%;
+    }
 }
 
 .container-1{
     color: black;
     background-color: var(--white);
     h1{
-        
+        animation: aparecer 3s ease;
+        -webkit-animation-timeline: view();
         margin:20px ;
     }
     img{
@@ -190,9 +196,7 @@ header{
         height: 1200px;
         img{
             width: 100%;
-            animation: aumentar 2s ease-in;
-        animation-timeline: view();
-        animation-range: cover 0% cover 60%;
+            
         }
     }
     .container-1{
@@ -201,8 +205,7 @@ header{
         justify-content: space-between;
         h1{
            font-size: 36px;
-           animation: aparecer 3s ease;
-        animation-timeline: view();
+           
         }
     }
     .container-1-5{
@@ -267,9 +270,7 @@ header{
         height: 900px;
         img{
             width: 100%;
-            animation: aumentar 2s ease-in;
-        animation-timeline: view();
-        animation-range: cover 0% cover 60%;
+            
         }
     }
     .container-1{
@@ -278,8 +279,7 @@ header{
         align-items: flex-end;
         h1{
             font-size: var(--font-subtitulo);
-            animation: aparecer 3s ease;
-        animation-timeline: view();
+            
         }
         img{
             width: 70%;

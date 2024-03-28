@@ -43,12 +43,19 @@ header {
   justify-content: center;
   animation: aparecer 2s ease-in-out;
 }
+header img {
+  animation: aumentar 2s ease-in;
+  -webkit-animation-timeline: view();
+  -webkit-animation-range: cover 0% cover 60%;
+}
 
 .container-1 {
   color: black;
   background-color: var(--white);
 }
 .container-1 h1 {
+  animation: aparecer 3s ease;
+  -webkit-animation-timeline: view();
   margin: 20px;
 }
 .container-1 img {
@@ -163,9 +170,6 @@ header {
   }
   header img {
     width: 100%;
-    animation: aumentar 2s ease-in;
-    animation-timeline: view();
-    animation-range: cover 0% cover 60%;
   }
   .container-1 {
     display: flex;
@@ -174,8 +178,6 @@ header {
   }
   .container-1 h1 {
     font-size: 36px;
-    animation: aparecer 3s ease;
-    animation-timeline: view();
   }
   .container-1-5 {
     width: 100%;
@@ -228,9 +230,6 @@ header {
   }
   header img {
     width: 100%;
-    animation: aumentar 2s ease-in;
-    animation-timeline: view();
-    animation-range: cover 0% cover 60%;
   }
   .container-1 {
     display: flex;
@@ -239,8 +238,6 @@ header {
   }
   .container-1 h1 {
     font-size: var(--font-subtitulo);
-    animation: aparecer 3s ease;
-    animation-timeline: view();
   }
   .container-1 img {
     width: 70%;
