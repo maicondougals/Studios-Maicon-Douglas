@@ -47,8 +47,8 @@ header{
     animation: aparecer 2s ease-in-out;   
     img{
         animation: aumentar 2s ease-in;
-        -webkit-animation-timeline: view();
-        -webkit-animation-range: cover 0% cover 60%;
+        animation-timeline: view();
+        animation-range: cover 0% cover 60%;
     }
 }
 
@@ -335,10 +335,10 @@ header{
     header{
         background-image:  url(/midia/capaCelular.png);
         background-position: center;
-        background-size: contain;
+        background-size: 100%;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        height: 700px;
+        height: 650px;
         align-items: flex-end;
       
         img{
