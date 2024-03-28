@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --white:rgb(215, 215, 215);
   --black:rgb(0, 0, 0);
@@ -15,7 +16,9 @@ body {
   height: 5000px;
   overflow-x: hidden;
   color: var(--white);
-  font-family: "Fraunces", serif;
+  font-family: "Libre Caslon Display", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 nav {
@@ -34,34 +37,33 @@ nav img {
 }
 
 header {
-  background-image: url(/midia/background.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   width: 100%;
-  height: 1100px;
   display: flex;
   align-items: center;
   justify-content: center;
   animation: aparecer 2s ease-in-out;
 }
 header img {
-  animation: diminuir 2s ease-in-out;
+  animation: aumentar 2s ease-in;
   animation-timeline: view();
-  animation-range: cover 50%;
+  animation-range: cover 0% cover 60%;
 }
 
+.container-1 {
+  color: black;
+  background-color: var(--white);
+}
 .container-1 h1 {
   animation: aparecer 3s ease;
   animation-timeline: view();
   margin: 20px;
 }
 .container-1 img {
-  background: radial-gradient(grey, rgba(0, 0, 0, 0.532), black);
-  animation: aumentar 1s ease-in-out;
-  animation-timeline: view();
-  animation-range: cover 0% cover 30%;
+  animation: balança 10s infinite ease-in;
+}
+
+.container-1-5 .container-text {
+  margin: 20px;
 }
 
 .container-2 h1 {
@@ -143,9 +145,37 @@ header img {
     transform: translateX(0);
   }
 }
+@keyframes balança {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+  25% {
+    transform: rotate3d(0, 1, 0, 20deg);
+  }
+  50% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+  75% {
+    transform: rotate3d(0, 1, 0, -20deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+}
 @media screen and (min-width: 1023px) {
   nav img {
     width: 400px;
+  }
+  header {
+    background-image: url(/midia/capaComputador.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 1200px;
+  }
+  header img {
+    width: 100%;
   }
   .container-1 {
     display: flex;
@@ -196,8 +226,16 @@ header img {
   nav img {
     width: 400px;
   }
+  header {
+    background-image: url(/midia/capaTablet.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 900px;
+  }
   header img {
-    width: 80%;
+    width: 100%;
   }
   .container-1 {
     display: flex;
@@ -249,28 +287,36 @@ header img {
     width: 200px;
   }
   header {
+    background-image: url(/midia/capaCelular.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 700px;
+    align-items: flex-end;
   }
   header img {
-    width: 80%;
+    width: 100%;
   }
   .container-1 {
+    height: 500px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
   }
   .container-1 h1 {
     font-size: var(--font-subtitulo);
   }
   .container-1 img {
-    width: 70%;
+    width: 100%;
   }
   .container-1-5 {
     width: 90%;
     height: auto;
     display: flex;
     flex-direction: column;
-    text-align: left;
+    text-align: center;
     margin: 0 auto;
   }
   .container-1-5 img {
