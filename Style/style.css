@@ -282,11 +282,11 @@ header img {
   }
   header {
     background-image: url(/midia/capaCelular.png);
-    background-position: center;
+    background-position: 100% auto;
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 650px;
+    height: 500px;
     align-items: flex-end;
   }
   header img {
