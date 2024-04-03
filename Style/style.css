@@ -208,6 +208,7 @@ header img {
 
 .container-2-5 {
   height: 800px;
+  background: radial-gradient(rgba(15, 0, 128, 0.503) 30%, black 70%);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
