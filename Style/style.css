@@ -207,7 +207,6 @@ header img {
 }
 
 .container-2-5 {
-  height: 800px;
   background: radial-gradient(rgba(15, 0, 128, 0.503) 30%, black 70%);
   margin: 0 auto;
   display: flex;
@@ -430,6 +429,9 @@ header img {
     width: 400px;
     height: 400px;
   }
+  .container-2-5 {
+    height: 800px;
+  }
   .container-2-5 .inclina-container {
     width: 400px;
     height: 400px;
@@ -499,6 +501,9 @@ header img {
   .container-2 .carousel .imagem {
     width: 300px;
     height: 300px;
+  }
+  .container-2-5 {
+    height: 700px;
   }
   .container-2-5 .inclina-container {
     width: 400px;
@@ -579,6 +584,9 @@ header img {
   .container-2 .carousel .imagem {
     width: 200px;
     height: 200px;
+  }
+  .container-2-5 {
+    height: 500px;
   }
   .container-2-5 .inclina-container {
     width: 200px;

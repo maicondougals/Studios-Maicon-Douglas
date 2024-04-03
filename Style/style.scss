@@ -178,7 +178,7 @@ header{
     background-color: rgb(255, 255, 255);
 }
 .container-2-5{
-    height: 800px;
+    
     background: radial-gradient( rgba(15, 0, 128, 0.503)30%, black 70%);
     margin: 0 auto;
     display: flex;
@@ -442,6 +442,7 @@ header{
         }
     }
     .container-2-5{
+        height: 800px;
         .inclina-container{
             width: 400px;
             height: 400px;
@@ -529,6 +530,7 @@ header{
         }
     }
     .container-2-5{
+        height: 700px;
         .inclina-container{
             width: 400px;
             height: 400px;
@@ -629,7 +631,7 @@ header{
         }
     }
     .container-2-5{
-
+        height: 500px;
         .inclina-container{
             width: 200px;
             height: 200px;
