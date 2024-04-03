@@ -69,7 +69,8 @@ header{
         color: var(--black);
         font-size: 15px;
         margin-top: 20px;
-        transition: all 1s linear
+        transition: all 1s linear;
+        cursor:pointer;
         
     }
     .box-responsivo button:hover{transform: scale(1.1); transition: all 1s linear;}
@@ -176,6 +177,7 @@ header{
     margin-top: 55px;
     border: none;
     background-color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 .container-2-5{
     
