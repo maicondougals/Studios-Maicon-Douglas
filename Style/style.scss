@@ -60,13 +60,86 @@ header{
         -webkit-animation-timeline: view();
         margin:20px ;
     }
-    img{
-   
-  
-        animation: balança 10s infinite ease-in;
-      
-
+    .box-responsivo button{
+        width: 100%;
+        height: 50px;
+        border: none;
+        border-radius: 24px;
+        background-color:  rgb(100, 148, 173);
+        color: var(--black);
+        font-size: 15px;
+        margin-top: 20px;
+        transition: all 1s linear
+        
     }
+    .box-responsivo button:hover{transform: scale(1.1); transition: all 1s linear;}
+    .box-responsivo{
+        
+        .tilt-box-wrap{
+            position: relative;
+            transition: all .6s ease-out;
+            perspective: 1000px;
+        }
+        .tilt-box-wrap:hover{
+            transition: all .5s linear;
+            transform: scale(1.1);
+        }
+        .tilt-box{
+            background:linear-gradient(var(--black), var(--grey));
+            width: 99%;
+            height: 99%;
+            text-transform: uppercase;
+            border-radius: 24px;
+            color: var(--white);
+    
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+    
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            transform: rotateX(0deg) rotateY(0deg);
+            transition: all .6s ease-out;
+    
+        }
+        .tilt-box strong{
+            transform: translateZ(100px);
+        }
+        .tilt-box img{
+            transform: translateZ(100px);
+            width: 40%;
+            
+        }
+        .t_over{
+            width: 33.333%;
+            height: 33.333%;
+            position: absolute;
+            z-index: 1;
+            
+        }
+        .t_over:nth-child(1){left: 0px;top: 0px;}
+        .t_over:nth-child(2){left: 33.333%;top: 0;}
+        .t_over:nth-child(3){left: 66.666%;top: 0;}
+        .t_over:nth-child(4){left: 0;top: 33.333%;}
+        .t_over:nth-child(5){left: 33.333%;top: 33.333%;}
+        .t_over:nth-child(6){left: 66.666%;top:33.333%;}
+        .t_over:nth-child(7){left: 0;top: 66.666%;}
+        .t_over:nth-child(8){left: 33.333%;top: 66.666%;}
+        .t_over:nth-child(9){left: 66.666%;top: 66.666%;}
+    
+        .t_over:nth-child(1):hover ~ .tilt-box{transform: rotateX(-20deg) rotateY(20deg);}
+        .t_over:nth-child(2):hover ~ .tilt-box{transform: rotateX(-20deg) rotateY(0deg);}
+        .t_over:nth-child(3):hover ~ .tilt-box{transform: rotateX(-20deg) rotateY(-20deg);}
+        .t_over:nth-child(4):hover ~ .tilt-box{transform: rotateX(0deg) rotateY(20deg);}
+        .t_over:nth-child(5):hover ~ .tilt-box{transform: rotateX(0deg) rotateY(0deg);}
+        .t_over:nth-child(6):hover ~ .tilt-box{transform: rotateX(0deg) rotateY(-20deg);}
+        .t_over:nth-child(7):hover ~ .tilt-box{transform: rotateX(0deg) rotateY(20deg);}
+        .t_over:nth-child(8):hover ~ .tilt-box{transform: rotateX(20deg) rotateY(0deg);}
+        .t_over:nth-child(9):hover ~ .tilt-box{transform: rotateX(20deg) rotateY(-20deg);}
+    
+    }
+   
 }
 .container-1-5{
     .container-text{
@@ -200,12 +273,19 @@ header{
         }
     }
     .container-1{
+        height: 550px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         h1{
            font-size: 36px;
            
+        }
+        .box-responsivo{
+            .tilt-box-wrap{
+                width: 400px;
+                height: 400px;
+            }
         }
     }
     .container-1-5{
@@ -276,13 +356,17 @@ header{
     .container-1{
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
+        height: 600px;
         h1{
             font-size: var(--font-subtitulo);
             
         }
-        img{
-            width: 70%;
+        .box-responsivo{
+            .tilt-box-wrap{
+                width: 400px;
+                height: 400px;
+            }
         }
     }
     .container-1-5{
@@ -347,7 +431,7 @@ header{
     }
     .container-1{
         
-        height: 500px;
+        height: 600px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -355,9 +439,11 @@ header{
         h1{
             font-size: var(--font-subtitulo);
         }
-        img{
-            width: 100%;
-           
+        .box-responsivo{
+            .tilt-box-wrap{
+                width: 300px;
+                height: 400px;
+            }
         }
     }
     .container-1-5{
