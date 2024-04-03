@@ -197,6 +197,107 @@ header img {
   margin-left: 20px;
 }
 
+.container-2-5 button {
+  width: 30%;
+  height: 30px;
+  border-radius: 24px;
+  margin-top: 55px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+}
+
+.container-2-5 {
+  height: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.container-2-5 .inclina-container {
+  position: relative;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+.container-2-5 .inclina {
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(50deg) rotateY(20deg);
+  background-color: rgba(255, 255, 255, 0.561);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transition: all 0.6s ease;
+}
+.container-2-5 .camada {
+  position: absolute;
+}
+.container-2-5 .camada:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  background-image: url(/midia/camada1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100% auto;
+  transform: translateZ(20px);
+  transition: all 0.6s ease;
+}
+.container-2-5 .camada:nth-child(2) {
+  width: 60%;
+  height: 60%;
+  bottom: 0px;
+  right: 0px;
+  background-image: url(/midia/camada2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 100% auto;
+  transform: translateZ(60px);
+  transition: all 0.6s ease;
+}
+.container-2-5 .camada:nth-child(3) {
+  width: 100%;
+  height: 20%;
+  top: 2%;
+  left: 7%;
+  transform: translateZ(100px);
+  transition: all 0.6s ease;
+}
+.container-2-5 .camada:nth-child(4) {
+  width: 50%;
+  height: 80%;
+  left: 7%;
+  top: 20%;
+  text-align: left;
+  transform: translateZ(120px);
+  transition: all 0.6s ease;
+}
+.container-2-5 .camada:nth-child(5) {
+  width: 60%;
+  height: 60%;
+  bottom: 0px;
+  right: 0px;
+  background-image: url(/midia/camada5.png);
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: 25% 20%;
+  transform: translateZ(150px);
+  transition: all 0.6s ease;
+}
+.container-2-5 .inclina:hover > .camada {
+  transform: translateZ(0px) rotateX(0deg) rotateY(0deg);
+}
+.container-2-5 .inclina:hover {
+  transform: translateZ(0px) rotateX(0deg) rotateY(0deg);
+}
+.container-2-5 .inclinar {
+  transform: translateZ(0px) rotateX(0deg) rotateY(0deg);
+}
+
 .container-3 {
   width: 100%;
   background-color: var(--grey);
@@ -325,6 +426,14 @@ header img {
     width: 400px;
     height: 400px;
   }
+  .container-2-5 .inclina-container {
+    width: 400px;
+    height: 400px;
+  }
+  .container-2-5 .inclina {
+    width: 800px;
+    height: 400px;
+  }
   .container-3 {
     height: 800px;
     display: flex;
@@ -386,6 +495,14 @@ header img {
   .container-2 .carousel .imagem {
     width: 300px;
     height: 300px;
+  }
+  .container-2-5 .inclina-container {
+    width: 400px;
+    height: 400px;
+  }
+  .container-2-5 .inclina {
+    width: 600px;
+    height: 400px;
   }
   .container-3 {
     height: 800px;
@@ -457,6 +574,15 @@ header img {
   }
   .container-2 .carousel .imagem {
     width: 200px;
+    height: 200px;
+  }
+  .container-2-5 .inclina-container {
+    width: 200px;
+    height: 200px;
+    font-size: 10px;
+  }
+  .container-2-5 .inclina {
+    width: 400px;
     height: 200px;
   }
   .container-3 {

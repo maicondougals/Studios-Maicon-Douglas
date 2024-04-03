@@ -76,6 +76,23 @@
         </div>
     </section>
 
+    <div class="container-2-5">
+        <div class="inclina-container">
+
+            <div id="inclina" class="inclina">
+                <div class="camada"></div>
+                <div class="camada"></div>
+                <div class="camada"><h1>Flexivel e Dinânico</h1></div>
+                <div class="camada"><h3>Imagine seu negócio brilhando no cenário digital, atraindo olhares, conquistando corações e impulsionando vendas. Agora, dê vida a esse sonho.</h3></div>
+                <div class="camada"></div>
+            </div>
+        </div>
+        <button id="botao">clique aqui</button>
+    </div>
+
+
+
+
     <section class="container-3">
         <div class="plano 1">
             <h1>Página Sofisticada</h1>
@@ -123,6 +140,20 @@
         </div>
     </section>
     
-    
+    <script>
+        const inclina = document.getElementById('inclina')
+const camadas = document.getElementById('camada')
+const btn = document.getElementById('botao')
+
+
+btn.addEventListener('click', function(){
+    if(inclina.classList.contains('inclinar')){
+    inclina.classList.remove('inclinar')
+} else{
+    inclina.classList.add('inclinar')
+}
+
+})
+    </script>
 </body>
 </html>
