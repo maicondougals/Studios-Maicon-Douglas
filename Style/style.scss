@@ -14,7 +14,7 @@
 
 body{
     background-color:var(--black);
-    height: 5000px;
+    height: auto;
     overflow-x:hidden;
     color: var(--white);
     font-family: "Libre Caslon Display", serif;
@@ -162,7 +162,7 @@ header{
         overflow-x: auto;
         white-space: nowrap;
         .imagem{
-            background: radial-gradient(grey,black, black);
+            background: radial-gradient(blue,black, black);
             border-radius: 24px;
             margin-left: 20px;
         }
@@ -176,7 +176,7 @@ header{
     border-radius: 24px;
     margin-top: 55px;
     border: none;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--white);
     cursor: pointer;
 }
 .container-2-5{
@@ -290,30 +290,23 @@ header{
     }
 }
 .container-3{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     width: 100%;
-    
-    background-color: var(--grey);
-    
-    justify-content: center;
-    align-items: center;
-    .plano{
-        text-align: center;
-        margin: 20px;
+    height: 400px;
+    text-align: center;
+    background-color: var(--white);
+    img{
+        width: 50px;
+        height: 50px;
+        
         border-radius: 24px;
-        
-        background-color: var(--black);
-        h1{
-            margin: 20px;
-        }
-        ul{
-            display: flex;
-            flex-direction: column;
-            margin: 20px auto;
-            text-align: left;
-            width: 80%;
-        }
-        
+        padding: 5px;
+      
     }
+   
 }
 @keyframes diminuir {
     from{
@@ -421,7 +414,7 @@ header{
             
             animation: lado 1s ease-in-out;
             animation-timeline: view();
-            animation-range: cover 0% cover 60%;
+            animation-range: cover 0% cover 40%;
             background-color: var(--grey);
             padding: 24px;
             border-radius: 24px;
@@ -438,8 +431,8 @@ header{
         .carousel{
             
             .imagem{
-                width: 400px;
-                height: 400px;
+                width: 300px;
+                height: 300px;
             }
         }
     }
@@ -455,13 +448,12 @@ header{
         }
     }
     .container-3{
-        height: 800px;
-    display: flex;
-        .plano{
-            width: 500px;
-            height: 700px;
+        img:hover{
+            background:radial-gradient(blue , rgba(0, 0, 255, 0.062), var(--white));
+           
         }
     }
+   
 }
 @media screen and (min-width: 768px) and
 (max-width: 1023px){
@@ -526,8 +518,8 @@ header{
         .carousel{
             
             .imagem{
-                width: 300px;
-                height: 300px;
+                width: 250px;
+                height: 250px;
             }
         }
     }
@@ -543,13 +535,12 @@ header{
         }
     }
     .container-3{
-        height: 800px;
-    display: flex;
-        .plano{
-            width: 500px;
-            height: 700px;
+        img:hover{
+            background:radial-gradient(blue , rgba(0, 0, 255, 0.048), var(--white));
+           
         }
     }
+   
 }
 @media screen and (max-width: 768px){
     nav{
@@ -642,17 +633,6 @@ header{
         .inclina{
             width: 350px;
             height: 200px;
-        }
-    }
-    .container-3{
-       
-        height: 1200px;
-        display: flex;
-        flex-direction: column;
-        .plano{
-            width: 90%;
-           height: 400px;
-         
         }
     }
 }
